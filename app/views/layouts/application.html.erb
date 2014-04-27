@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Kothikommachi" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Kothikommachi" %>">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%# Modernizr is required for Zurb Foundation %>
+    <%= javascript_include_tag 'vendor/modernizr' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link href='http://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet' type='text/css'>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <div class='ads'>
+    </div>
+      <%= render 'layouts/nava' %>
+    <div class='wall'>
+      <!--<div style='position:absolute;bottom:0px;'><video width="320" height="240" controls>
+      <source src="video.mp4" type="video/mp4">
+      
+      Your browser does not support the video tag.
+      </video>
+    </div> -->
+    </div>
+    <main role="main" style='background-image: url(/assets/main-bg.png);background-repeat:repeat-x;background-color:rgb(248,249,250);'>
+        <div id='containerdiv'>
+          <div style='background-color:#1c1d1f;color:white;min-height:30px'></div>
+          <div id='content'>
+          <%= yield %>
+          </div>
+        </div>
+    </main>
+  </body>
+</html>
