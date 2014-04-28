@@ -1,4 +1,7 @@
-<h1 class="h1">Cast & Crew </h1>
+<div>
+<ul class="clearing-thumbs small-block-grid-4" data-clearing>
 <% @members.each do |m| %>
-	<img class='minwid' src='/assets/<%=m%>.png'></img>
+	<li class="th"><a href="/assets/<%=m%>.png"><img data-caption="caption here..." src='/assets/<%=m%>.png'></a></li>
 <%end %>
+</ul>
+</div>
