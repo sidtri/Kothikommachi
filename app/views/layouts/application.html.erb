@@ -11,14 +11,14 @@
     <link href='http://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet' type='text/css'>
     <%= csrf_meta_tags %>
   </head>
-  <body>
+  <body class='body'>
     <header>
       <%= render 'layouts/navigation' %>
     </header>
     <div class='ads'>
     </div>
       <%= render 'layouts/nava' %>
-    <div class='wall'>
+    <div class='wall' style="background-image:url(/assets/<%=@wall%>.jpg);">
       <!--<div style='position:absolute;bottom:0px;'><video width="320" height="240" controls>
       <source src="video.mp4" type="video/mp4">
       
@@ -26,7 +26,7 @@
       </video>
     </div> -->
     </div>
-    <main role="main" style='background-image: url(/assets/main-bg.png);background-repeat:repeat-x;background-color:rgb(248,249,250);'>
+    <main role="main" style='background-image: url(/assets/main-bg.png);background-repeat:repeat-x;background-color:rgb(248,249,250);margin-bottom:30px'>
         <div id='containerdiv'>
           <div style='background-color:#1c1d1f;color:white;min-height:30px'></div>
           <div id='content'>
@@ -34,5 +34,11 @@
           </div>
         </div>
     </main>
+    <div id='footer'><center>This Site is under Maintenance @siddharth</center></div>
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+    $('.wall').hide().fadeIn(1500);
+    });
+    </script>
   </body>
 </html>

@@ -1,8 +1,8 @@
-<div class='navbar'>
+<div class='navbar' data-no-turbolink>
   <ul>
-    <li><a href='<%= root_url %>'>Home</a></li> |
-    <li><a href='/characters/index'>Characters</a></li> |
-    <li><a href="/gallery/index">Gallery</a></li> |
-    <li><a href="/main_page/castcrew">Cast & Crew</a></li>
+    <li class="<%=@rootcls%>"><a href='<%= root_url %>'>Home</a></li> |
+    <li class="<%=@chrcls%>"><a href='/characters/index'>Characters</a></li> |
+    <li class="<%=@galcls%>"><a href="/gallery/index">Gallery</a></li> |
+    <li class="<%=@cascls%>"><a href="/main_page/castcrew">Cast & Crew</a></li>
   </ul>
 </div>

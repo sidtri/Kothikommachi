@@ -1,8 +1,17 @@
 // Place all the styles related to the MainPage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+::selection{
+	background-color:rgb(79,104,101);
+	color:white;
+}
+
 .navbar{
-	min-height:50px;	
+	min-height:40px;
+	max-height:40px;
+	background-color:rgba(107, 117, 116, 0.14);	
+	border-bottom:1px dashed #6eb031;
+	border-top:1px dashed #6eb031;
 }
 ul{
 	padding:0 0px;
@@ -17,20 +26,29 @@ ul{
 	display:inline-block;
 	padding-left:20px;
 	padding-right:20px;
-	height:50px;
+	height:40px;
+		
 		a{
-			color:#71716C;
+			color:#6eb031;
 			font-size:20px;
 			font-weight:bold;
 			font-family: 'Allerta Stencil', 'sans-serif';
 		}
 		&:hover{
-		background:rgb(79,104,101);
-		a{
-		color:#eee;
-		}
+			background:rgb(79,104,101);
+			a{
+				color:#eee;
+			}
 		}
 	}
+}
+.navbar .active{
+	
+			background:rgb(79,104,101);
+			a{
+				color:#eee;
+			}
+	
 }
 .navbarfixed{
 	position:fixed;
@@ -48,7 +66,7 @@ ul{
 }
 .wall{
 	min-height:600px;
-	background-image:url(/assets/wall.jpg);
+	
 	background-repeat:no-repeat;
 	background-position:center;
 	position:relative;
@@ -56,7 +74,7 @@ ul{
 #containerdiv{
 	width: 850px;
 	margin:0px auto;	
-	margin-top:-30px;
+	margin-top:-60px;
 	background-color:white;
 	
 	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
@@ -99,4 +117,19 @@ ul{
 	background-color:#1c1d1f;
 	color:white;
 	padding-left:30px;
+}
+.minwid{
+	width:250px;
+	height:150px;
+	margin:10px 20px;
+	border:3px solid #333;
+}
+#footer{
+	color:#777;
+	background-color:#dee;
+	min-height:30px;
+	-webkit-box-shadow: 10px 0px 0px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 10px 0px 0px 0px rgba(0,0,0,0.25);
+	box-shadow: 10px 0px 0px 0px rgba(0,0,0,0.25);	
+	margin-top:300px;
 }

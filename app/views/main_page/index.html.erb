@@ -27,20 +27,16 @@ Bapu, Anu, and Vara Mullapudi, and Karthik Sundaram.
 
 
 <script type='text/javascript'>
-	function Scroll(){
-      this.content = document.getElementById('content')
-      this.length = content.offsetHeight;
-    this.scr=function(){
-      window.scrollBy(0,this.length);
+	var scrolled = 30;
+  function scr(){
+    window.scrollBy(0,30);
+  }
+  function war(){
+    setTimeout('scr()',500);
+    scrolled += 30;
+    if(scrolled<600){
+      war()
     }
   }
-	(function(){
-    if(window.pageYOffset == 0){
-      var scrol = new Scroll()
-      scrol.scr()
-    }else{
-      console.log('get it ')
-    }
-  })()
 	
 </script>
